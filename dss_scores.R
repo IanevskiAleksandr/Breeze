@@ -1,6 +1,33 @@
-###########################################################################################################################
+##########################################################################################################################
 # EXAMPLE CODE for Curve-Fitting and DSS calculation. Just install all the required libraries and run the example
 ###########################################################################################################################
+
+#Introduction:
+# We developed a systematic algorithmic solution for quantitative drug sensitivity scoring (DSS), 
+# based on continuous modeling and integration of multiple dose-response relationships in high-throughput compound testing studies. 
+# Mathematical model estimation and continuous interpolation makes the scoring approach robust against sources of technical variability and 
+# widely applicable to various experimental settings, both in cancer cell line models and primary patient-derived cells. 
+# We have demonstrated its improved performance over other response parameters especially in a leukemia patient case study, 
+# where differential DSS between patient and control cells enabled identification of both cancer-selective drugs and drug-sensitive patient sub-groups, 
+# as well as dynamic monitoring of the response patterns and oncogenic driver signals during cancer progression and relapse in individual patient cells ex vivo. 
+# An open-source and easily extendable implementation of the DSS calculation is made freely available to support its tailored application to translating drug
+# sensitivity testing results into clinically actionable treatment options.
+
+#License:
+# The DSS R-code is made available under the terms of the GNU General Public License, 
+# which means that the source code is freely available for use within other software, but if you alter the code and distribute it, 
+# you must make the new source code freely available as well. This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. 
+# In case you use the package in your work, we do appreciate a citation to a DSS publication.
+
+#Citations: 
+# Yadav B, Pemovska T, Szwajda A, Kulesskiy E, Kontro M, Karjalainen R, Majumder MM, Malani D, Murumägi A, Knowles J, Porkka K, Heckman C, Kallioniemi O, 
+# Wennerberg K, Aittokallio T. Quantitative scoring of differential drug sensitivity for individually optimized anticancer therapies. 
+# Scientific Reports 2014;4:5193. doi: 10.1038/srep05193.
+# 
+# Potdar S, Ianevski A, Mpindi JP, Bychkov D, Fiere C, Ianevski P, Yadav B, Wennerberg K, Aittokallio T, Kallioniemi O, Saarela J, Östling P. 
+# Breeze: an integrated quality control and data analysis application for high-throughput drug screening. 
+# Bioinformatics. 2020;36(11):3602-3604. doi: 10.1093/bioinformatics/btaa138.
+
 
 
 lapply(c("plotly", "scales", "parallel", "foreach", "gridExtra", "grid", "graphics", "gplots", "ggplot2", "raster", "xtable","Rcpp","dplyr"), library, character.only = !0)
