@@ -29,11 +29,9 @@
 # Bioinformatics. 2020;36(11):3602-3604. doi: 10.1093/bioinformatics/btaa138.
 
 
-
 lapply(c("plotly", "scales", "parallel", "foreach", "gridExtra", "grid", "graphics", "gplots", "ggplot2", "raster", "xtable","Rcpp","dplyr"), library, character.only = !0)
 lapply(c("drc", "caTools", "ggplot2", "gsubfn", "gtools", "data.table", "doSNOW","stringr","MESS"), library, character.only = !0)
 options(stringsAsFactors = F)
-
 
 # INPUT YOUR DATA (drug/pair doses)
 dose = c(0.1, 1, 10, 100, 1000); 
