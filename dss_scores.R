@@ -1,3 +1,6 @@
+###########################################################################################################################
+# EXAMPLE CODE for Curve-Fitting and DSS calculation. Just install all the required libraries and run the example
+
 lapply(c("plotly", "scales", "parallel", "foreach", "gridExtra", "grid", "graphics", "gplots", "ggplot2", "raster", "xtable","Rcpp","dplyr"), library, character.only = !0)
 lapply(c("drc", "caTools", "ggplot2", "gsubfn", "gtools", "data.table", "doSNOW","stringr","MESS"), library, character.only = !0)
 options(stringsAsFactors = F)
@@ -9,7 +12,7 @@ inhibition_percent = c(0, 5.5, 15, 60, 99)
 drug_name = "MyDrugName"
 DSS_type = 2
 
-
+# DSS FUNCTION
 dss<-function(ic50,slope,max,min.conc.tested,max.conc.tested,y=10,DSS.type=2,concn_scale=1e-9){
   
   a=as.numeric(unname(max)); b=as.numeric(unname(slope)); d=0; ic50 = as.numeric(unname(ic50));
@@ -43,6 +46,7 @@ dss<-function(ic50,slope,max,min.conc.tested,max.conc.tested,y=10,DSS.type=2,con
 }
 
 
+# PLOTTING AND CALCULATIONS
     #combine the data and sort by dose.
     mat_tbl <- data.frame(inhibition_percent, dose, logconc = log10(dose), 100-inhibition_percent)
     mat_tbl <- mat_tbl[order(mat_tbl[,"dose"]),]  
